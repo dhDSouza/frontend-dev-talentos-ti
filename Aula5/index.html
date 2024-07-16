@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form action="/submit" method="POST">
+
+        <!-- Nome Completo -->
+
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required minlength="2" maxlength="100">
+        <br><br>
+
+        <!-- Atributos:
+             - type="text": Define o campo como texto.
+             - id="nome": Atribui um identificador único ao campo, utilizado para associar o label ao input.
+             - name="nome": Nome do campo que será enviado no formulário.
+             - required: Torna o campo obrigatório.
+             - minlength="2": Define o tamanho mínimo do texto (2 caracteres).
+             - maxlength="100": Define o tamanho máximo do texto (100 caracteres).
+        -->
+
+        <!-- Senha -->
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required minlength="6" maxlength="20">
+        <br><br>
+
+        <!-- Atributos:
+             - type="password": Define o campo como senha, ocultando os caracteres digitados.
+             - id="senha": Identificador único.
+             - name="senha": Nome do campo.
+             - required: Campo obrigatório.
+             - minlength="6": Tamanho mínimo de 6 caracteres.
+             - maxlength="20": Tamanho máximo de 20 caracteres.
+        -->
+
+        <!-- E-mail -->
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Atributos:
+             - type="email": Define o campo como e-mail, validando o formato.
+             - id="email": Identificador único.
+             - name="email": Nome do campo.
+             - required: Campo obrigatório.
+        -->
+
+        <!-- Telefone -->
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}" placeholder="00-0000-0000" required>
+        <br><br>
+
+        <!-- Atributos:
+             - type="tel": Define o campo como telefone.
+             - id="telefone": Identificador único.
+             - name="telefone": Nome do campo.
+             - pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}": Define um padrão para a entrada do telefone.
+             - placeholder="00-0000-0000": Texto de exemplo no campo.
+             - required: Campo obrigatório.
+        -->
+
+        <!-- CPF -->
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+        <br><br>
+
+        <!-- Atributos:
+             - type="text": Define o campo como texto.
+             - id="cpf": Identificador único.
+             - name="cpf": Nome do campo.
+             - pattern="\d{3}\.\d{3}\.\d{3}-\d{2}": Padrão de máscara para CPF.
+             - placeholder="000.000.000-00": Texto de exemplo no campo.
+             - required: Campo obrigatório.
+        -->
+
+        <!-- Data de Nascimento -->
+
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" required>
+        <br><br>
+
+        <!-- Atributos:
+             - type="date": Define o campo como data.
+             - id="data_nascimento": Identificador único.
+             - name="data_nascimento": Nome do campo.
+             - required: Campo obrigatório.
+        -->
+
+        <!-- Gênero -->
+
+        <label>Gênero:</label>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="genero" value="feminino">
+        <label for="feminino">Feminino</label>
+        <br><br>
+
+        <!-- Atributos:
+             - type="radio": Define os campos como botões de opção.
+             - id="masculino"/"feminino": Identificadores únicos.
+             - name="genero": Nome do campo (deve ser o mesmo para agrupar as opções).
+             - value="masculino"/"feminino": Valores das opções.
+        -->
+
+        <!-- Interesses -->
+
+        <label>Interesses:</label>
+        <input type="checkbox" id="esportes" name="interesses" value="esportes">
+        <label for="esportes">Esportes</label>
+        <input type="checkbox" id="musica" name="interesses" value="musica">
+        <label for="musica">Música</label>
+        <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
+        <label for="tecnologia">Tecnologia</label>
+        <br><br>
+
+        <!-- Atributos:
+             - type="checkbox": Define os campos como caixas de seleção.
+             - id="esportes"/"musica"/"tecnologia": Identificadores únicos.
+             - name="interesses": Nome do campo (pode ser o mesmo para agrupar as opções).
+             - value="esportes"/"musica"/"tecnologia": Valores das opções.
+        -->
+
+        <!-- Salário Pretendido -->
+
+        <label for="salario">Salário Pretendido:</label>
+        <input type="number" id="salario" name="salario" min="1000" max="100000" step="500" required>
+        <br><br>
+
+        <!-- Atributos:
+             - type="number": Define o campo como numérico.
+             - id="salario": Identificador único.
+             - name="salario": Nome do campo.
+             - min="1000": Valor mínimo permitido.
+             - max="100000": Valor máximo permitido.
+             - step="500": Incremento dos valores.
+             - required: Campo obrigatório.
+        -->
+
+        <!-- Comentários -->
+
+        <label for="comentarios">Comentários:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50" maxlength="500"></textarea>
+        <br><br>
+
+        <!-- Atributos:
+             - id="comentarios": Identificador único.
+             - name="comentarios": Nome do campo.
+             - rows="4": Número de linhas visíveis.
+             - cols="50": Número de colunas visíveis.
+             - maxlength="500": Tamanho máximo do texto.
+        -->
+
+        <!-- Botão de Enviar -->
+
+        <input type="submit" value="Cadastrar">
+        
+        <!-- Atributos:
+             - type="submit": Define o botão para enviar o formulário.
+             - value="Cadastrar": Texto exibido no botão.
+        -->
+
+    </form>
+</body>
+</html>
