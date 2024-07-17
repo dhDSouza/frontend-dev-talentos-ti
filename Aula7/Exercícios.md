@@ -35,3 +35,12 @@
 
 1. Utilize o arquivo index.html dos exercícios anteriores.
 2. Modifique a tabela para adicionar uma segunda coluna ao lado do conteúdo principal.
+
+---
+
+### Soluções dos exercícios
+
+- [exercício 1](./Solucao/exercicio_1.html)
+- [exercício 2](./Solucao/exercicio_2.html)
+- [exercício 3](./Solucao/exercicio_3.html)
+- [exercício 4](./Solucao/exercicio_4.html)
