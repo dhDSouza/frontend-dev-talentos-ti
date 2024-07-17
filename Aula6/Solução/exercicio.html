@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livro</title>
+</head>
+
+<body>
+    <h1>Cadastro de Livro</h1>
+    <form action="#" method="GET">
+
+        <label for="titulo">Título do Livro:</label>
+        <input type="text" id="titulo" name="titulo" required>
+        <br><br>
+
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor" required>
+        <br><br>
+
+        <label for="genero">Gênero:</label>
+        <select id="genero" name="genero" required>
+            <option value="">Selecione um gênero</option>
+            <option value="ficcao">Ficção</option>
+            <option value="nao-ficcao">Não-ficção</option>
+            <option value="fantasia">Fantasia</option>
+            <option value="biografia">Biografia</option>
+            <option value="misterio">Mistério</option>
+        </select>
+        <br><br>
+
+        <label>Formato:</label>
+        <input type="checkbox" id="impresso" name="formato" value="impresso">
+        <label for="impresso">Impresso</label>
+        <input type="checkbox" id="digital" name="formato" value="digital">
+        <label for="digital">Digital</label>
+        <br><br>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" rows="5" cols="30" required></textarea>
+        <br>
+
+        <label for="senha">Senha para acesso:</label>
+        <input type="password" id="senha" name="senha" required>
+        <br><br>
+
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Limpar">
+
+    </form>
+</body>
+
+</html>
