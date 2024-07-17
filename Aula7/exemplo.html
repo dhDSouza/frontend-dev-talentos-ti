@@ -1,0 +1,93 @@
+<!--
+    Exemplo de estruturação com tabelas, usando o exercício da aula anterior
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livro</title>
+</head>
+
+<body>
+    <form action="#" method="GET">
+
+        <table border="1">
+            <th colspan="2">Cadastro de Livro</th>
+            <tr>
+                <td align="right">
+                    <label for="titulo">Título:</label>
+                </td>
+                <td>
+                    <input type="text" id="titulo" name="titulo" required>
+                </td>
+            </tr> 
+            <tr>
+                <td align="right">
+                    <label for="autor">Autor:</label>            
+                </td>
+                <td>
+                    <input type="text" id="autor" name="autor" required>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="genero">Gênero:</label>
+                </td>
+                <td>
+                    <select id="genero" name="genero" required>
+                        <option value="">Selecione um gênero</option>
+                        <option value="ficcao">Ficção</option>
+                        <option value="nao-ficcao">Não-ficção</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="biografia">Biografia</option>
+                        <option value="misterio">Mistério</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th rowspan="2" align="right">
+                    <label>Formato:</label>
+                </th>
+                <td>
+                    <input type="checkbox" id="impresso" name="formato" value="impresso">
+                    <label for="impresso">Impresso</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" id="digital" name="formato" value="digital">
+                    <label for="digital">Digital</label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="descricao">Descrição:</label>
+                </td>
+                <td>
+                    <textarea id="descricao" name="descricao" rows="5" cols="30" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="senha">Senha para acesso:</label>
+                </td>
+                <td>
+                    <input type="password" id="senha" name="senha" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Cadastrar">
+                </td>
+                <td>
+                    <input type="reset" value="Limpar">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
