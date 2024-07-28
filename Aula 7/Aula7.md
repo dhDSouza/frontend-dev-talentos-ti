@@ -6,7 +6,7 @@
 
 Vamos pegar como exemplo o formulário da aula anterior, e colocá-lo dentro de uma tabela.
 
-- [formulário original](../Aula6/Solução/exercicio.html)
+- [formulário original](../Aula%206/Solução/exercicio.html)
 - [formulário em tabela](./exemplo.html)
 
 ### Vamos à prática
