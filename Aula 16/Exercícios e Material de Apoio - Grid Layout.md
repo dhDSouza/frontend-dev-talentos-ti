@@ -6,7 +6,7 @@ Para aprimorar as habilidades com Grid Layout, pratique com o jogo **Grid Garden
 
 Além disso, para complementar seus estudos, pode ser realizada a leitura do material de apoio sobre Grid Layout disponível na Alura.
 
-- **Guia do Flexbox - Alura:** [Leia o artigo aqui](https://www.alura.com.br/artigos/criando-layouts-com-css-grid-layout)
+- **Guia do Grid Layout - Alura:** [Leia o artigo aqui](https://www.alura.com.br/artigos/criando-layouts-com-css-grid-layout)
 
 Aproveitem esses recursos e bons estudos!
 
