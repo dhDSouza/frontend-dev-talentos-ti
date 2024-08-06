@@ -83,6 +83,20 @@ Essas propriedades permitem que você especifique a posição e o tamanho dos it
 
 Esse item será posicionado na primeira e segunda coluna e na segunda e terceira linha.
 
+### `grid-template`
+
+O `grid-template` é uma propriedade curta que combina `grid-template-rows` e `grid-template-columns`.
+
+**Exemplo:** 
+```css
+.container {
+  display: grid;
+  grid-template: 50% 50% / 200px; 
+}
+```
+
+Isso irá criar uma grade com duas linhas com 50% cada, e uma coluna que tem 200 pixels de largura.
+
 ### `grid-gap`
 
 Define o espaço entre as linhas e colunas da grade.
@@ -146,6 +160,143 @@ Controla o fluxo automático dos itens quando não são explicitamente posiciona
 ```
 
 Com `grid-auto-flow: dense`, o Grid Layout tenta preencher os espaços vazios, ajustando o layout dos itens para usar o espaço disponível de forma mais eficiente.
+
+### `minmax()`
+
+A função `minmax()` permite definir o tamanho mínimo e máximo de uma faixa (track) no grid. Isso é especialmente útil para criar layouts responsivos onde os tamanhos dos elementos podem ajustar-se dinamicamente com base no espaço disponível.
+
+#### Sintaxe:
+```css
+grid-template-columns: minmax(min, max);
+grid-template-rows: minmax(min, max);
+```
+
+- `min` é o tamanho mínimo da faixa.
+- `max` é o tamanho máximo da faixa.
+
+#### Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo minmax</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            gap: 10px;
+        }
+        .grid-item {
+            background-color: #bada55;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+</html>
+```
+
+Neste exemplo, cada coluna terá pelo menos 100px de largura, mas pode expandir até ocupar 1fr (uma fração do espaço disponível) se houver espaço suficiente.
+
+### `auto-fit` e `auto-fill`
+
+Os valores `auto-fit` e `auto-fill` são usados com a função `repeat()` para criar faixas (tracks) responsivas que se ajustam automaticamente com base no espaço disponível no container.
+
+#### `auto-fit`
+
+O `auto-fit` ajusta automaticamente o número de faixas para caber no container, mesmo que algumas delas estejam vazias. Isso pode criar espaços flexíveis que se ajustam dinamicamente.
+
+#### Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo auto-fit</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+        }
+        .grid-item {
+            background-color: #bada55;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+</html>
+```
+
+Com `auto-fit`, o grid ajustará o número de colunas para caber no espaço disponível. Se houver mais espaço do que colunas, as colunas restantes se expandirão para ocupar o espaço disponível.
+
+#### `auto-fill`
+
+O `auto-fill` funciona de maneira similar ao `auto-fit`, mas ao invés de ajustar o número de faixas para caber no container, ele cria tantas faixas quanto possível, mesmo que isso signifique que algumas delas estarão vazias.
+
+#### Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo auto-fill</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+        }
+        .grid-item {
+            background-color: #bada55;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+</html>
+```
+
+Com `auto-fill`, o grid criará tantas colunas de 100px (ou mais, se houver espaço) quanto possível. Se houver mais espaço do que colunas, as colunas vazias ocuparão o espaço disponível.
+
+**OBSERVAÇÂO**
+
+Usar `minmax()`, `auto-fit` e `auto-fill` ajuda a criar layouts flexíveis e responsivos, ajustando os elementos de acordo com o espaço disponível no container. Isso permite que os layouts sejam mais adaptáveis a diferentes tamanhos de tela e resoluções.
 
 ## Exemplos Práticos
 
