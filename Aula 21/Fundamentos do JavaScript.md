@@ -113,10 +113,6 @@ console.log(!true);  // retornará  false
 
 - Crie uma página `HTML` simples e insira um script `JavaScript` que exiba uma mensagem "Bem-vindo ao JavaScript!" quando a página for carregada.
 
-**Exercício 1.2:**
-
-- Altere o script anterior para que a mensagem seja exibida apenas quando o usuário clicar em um botão na página.
-
 ### **2. Variáveis e Tipos de Dados**
 
 **Exercício 2.1:**
